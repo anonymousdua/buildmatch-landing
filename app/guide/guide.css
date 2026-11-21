@@ -1,0 +1,34 @@
+.g-page { padding: 24px 16px 48px; }
+.g-back { display: block; max-width: 760px; margin: 0 auto 12px; font-weight: 600; text-decoration: none; }
+.g-sheet { max-width: 760px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: clamp(20px, 5vw, 44px); display: flex; flex-direction: column; gap: 28px; }
+.g-eyebrow { color: var(--primary); }
+.g-title { font-weight: 800; font-size: clamp(30px, 6vw, 44px); line-height: 1.05; margin-bottom: 12px; letter-spacing: -.01em; }
+.g-hl { box-shadow: inset 0 -0.28em 0 rgba(245, 161, 28, .55); }
+.g-lede { margin: 0; color: var(--ink-2); max-width: 60ch; font-size: 17px; }
+
+.g-need { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; padding: 14px 16px; border: 1px dashed #d5dbe3; border-radius: 4px; font-size: 15px; margin: 0; }
+.g-need dt { font-family: var(--f-mono), monospace; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); padding-top: 2px; }
+.g-need dd { margin: 0; min-width: 0; }
+
+.g-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 22px; counter-reset: step; }
+.g-step { display: grid; grid-template-columns: 40px 1fr; gap: 14px; counter-increment: step; }
+.g-step::before { content: counter(step); font-family: var(--f-display); font-weight: 800; font-size: 18px; color: #fff; background: var(--primary); width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; margin-top: 2px; }
+.g-step > div { min-width: 0; }
+.g-step h2, .g-checks h2 { font-weight: 600; font-size: 20px; margin: 0 0 4px; }
+.g-why { margin: 0 0 10px; color: var(--ink-2); font-size: 15px; }
+.g-prompt { position: relative; background: #f4f7fa; border: 1px solid var(--border); border-radius: 4px; padding: 14px 16px; }
+.g-prompt pre { margin: 0; font-family: var(--f-mono), monospace; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; padding-right: 72px; }
+.g-fill { color: var(--primary); font-weight: 500; background: var(--accent-soft); }
+.g-copy { position: absolute; top: 10px; right: 10px; font: 500 12px var(--f-body), system-ui, sans-serif; color: var(--primary); background: #fff; border: 1px solid var(--border); border-radius: 3px; padding: 4px 10px; cursor: pointer; }
+.g-copy:hover { border-color: var(--primary); }
+
+.g-checks { border-top: 2px solid var(--ink); padding-top: 18px; }
+.g-checks h2 { margin-bottom: 12px; }
+.g-checks ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.g-check { display: flex; gap: 12px; align-items: flex-start; cursor: pointer; }
+.g-check input { width: 18px; height: 18px; margin: 3px 0 0; accent-color: var(--primary); flex: none; }
+.g-check input:checked + span { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--accent); }
+
+.g-offer { background: var(--navy); color: #fff; border-radius: 6px; padding: 18px 20px; font-weight: 500; margin: 0; }
+.g-offer a { color: var(--accent); font-weight: 600; }
+@media (max-width: 480px) { .g-step { grid-template-columns: 1fr; gap: 8px; } .g-need { grid-template-columns: 1fr; } }
